@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Website redesign case study for Honeybee Bakery, a fictional bakery — a concept portfolio project by Brittany Nation showing design process, rationale, and a hand-built before-and-after redesign.">
+<title>Honeybee Bakery Redesign — Website Redesign Case Study | Brittany Nation</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">Brittany Nation <span>· Design</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#changes">Key changes</a></li>
+        <li><a href="before.html">Before</a></li>
+        <li><a href="after.html">After</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="page-heading">
+    <div class="wrap">
+      <p class="eyebrow">Case study · Concept redesign</p>
+      <h1 id="page-heading">Honeybee Bakery: a website redesign case study</h1>
+      <p class="lead">I redesigned the website for Honeybee Bakery, a fictional neighborhood bakery, to show how I audit a dated site, make design decisions for real visitors, and build the result by hand in HTML and CSS.</p>
+      <div class="note"><p style="margin:0"><strong>Honest framing:</strong> This is a concept redesign of a fictional business, created for my portfolio. There was no client, no live site, and no measured results — so I have not invented metrics or customer outcomes. What is real is the process, the reasoning, and the build.</p></div>
+      <div class="btn-row">
+        <a class="btn" href="after.html">View the redesigned site</a>
+        <a class="btn secondary" href="before.html">View the original site</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="overview-heading">
+    <div class="wrap kicker-grid">
+      <div>
+        <h2 id="overview-heading">Overview</h2>
+        <p>The original Honeybee site had good bones — a warm business, a clear menu, and loyal regulars — buried under a layout that made all of it hard to find. Everything competed for attention at once, so nothing stood out.</p>
+        <p>My goal was not to make it look newer for its own sake. It was to answer the three questions most bakery visitors actually arrive with — <em>what do you make, when are you open, and where are you?</em> — in the first screen, on a phone, without hunting.</p>
+      </div>
+      <div class="card">
+        <h3>At a glance</h3>
+        <ul class="clean">
+          <li><strong>Type:</strong> Concept website redesign</li>
+          <li><strong>Pages:</strong> Original, redesign, and this case study</li>
+          <li><strong>My role:</strong> Audit, structure, visual design, and build</li>
+          <li><strong>Build:</strong> Hand-built HTML/CSS, mobile-first</li>
+          <li><strong>Workflow note:</strong> My design workflow is Sketch and Webflow; this demo was hand-built to show the code side as well</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="problem" aria-labelledby="problem-heading">
+    <div class="wrap">
+      <h2 id="problem-heading">The problem: what the old site got wrong</h2>
+      <div class="grid">
+        <article class="card"><h3>Everything shouted, so nothing landed</h3><p>Star banners, multiple badges, exclamation-heavy copy, and competing colored boxes all fought for the first glance. A new visitor could not tell what mattered most.</p></article>
+        <article class="card"><h3>The basics were buried</h3><p>Hours, address, and ordering information sat in a dense table at the very bottom. On a phone — how most people check a bakery — that meant scrolling past everything else first.</p></article>
+        <article class="card"><h3>Cramped, tiny, and hard to scan</h3><p>Small type, tight spacing, dashed borders, and a busy striped background made even short pages feel long. Menu items ran together instead of reading as individual choices.</p></article>
+        <article class="card"><h3>No clear next step</h3><p>The loudest link was “click here for directions,” while menu and custom-cake ordering — the actions that make the bakery money — had no clear path at all.</p></article>
+        <article class="card"><h3>Important details hid in fine print</h3><p>Allergy information and ordering notice were tucked into tiny disclaimer text, exactly where someone who needs them is least likely to look.</p></article>
+        <article class="card"><h3>It did not feel like the bakery</h3><p>Clashing primary colors said “generic template,” not warm bread and honey. The site undersold the one thing the business has that a chain does not: it feels personal.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="goals-heading">
+    <div class="wrap">
+      <h2 id="goals-heading">Goals</h2>
+      <div class="grid two">
+        <div class="card"><h3>For visitors</h3><ul class="clean"><li>Find hours, location, and menu highlights within seconds</li><li>Read comfortably on a phone, one-handed, in bright light</li><li>See allergy and ordering information before they need to ask</li></ul></div>
+        <div class="card"><h3>For the business</h3><ul class="clean"><li>Lead with the signature products that drive repeat visits</li><li>Make custom-cake enquiries an obvious next step</li><li>Look like the warm, trusted neighborhood place it already is</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="process" aria-labelledby="process-heading">
+    <div class="wrap">
+      <h2 id="process-heading">Process</h2>
+      <div class="grid">
+        <article class="card"><span class="tag">1 · Audit</span><h3>Read the old site like a visitor</h3><p>I went through the original page task by task — find the hours, find a price, figure out how to order a cake — and noted every point where I had to search, squint, or guess. That list became the problem section above.</p></article>
+        <article class="card"><span class="tag">2 · Structure</span><h3>Sitemap and wireframe thinking</h3><p>I kept one page but reordered it by visitor priority: hero with the promise, menu highlights, about, testimonials, then a visit block with hours and location. Wireframe first, decoration last — if the order is wrong, no palette fixes it.</p></article>
+        <article class="card"><span class="tag">3 · Visual direction</span><h3>Warm, plain, and appetizing</h3><p>Honey gold, cream, and warm brown, drawn from the products themselves. One serif for body warmth and one clean sans for headings and labels, generous spacing, and rounded cards instead of hard ruled boxes.</p></article>
+        <article class="card"><span class="tag">4 · Build</span><h3>Hand-built, mobile-first</h3><p>I built the redesign in semantic HTML and one shared CSS file, starting from the smallest screen and layering up. CSS color blocks stand in for photography, so the demo stays self-contained with no external images.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="changes" aria-labelledby="changes-heading">
+    <div class="wrap">
+      <h2 id="changes-heading">Key changes — and why</h2>
+      <div class="grid">
+        <article class="card"><h3>Hero answers the main question first</h3><p><strong>Change:</strong> One clear headline and two actions — menu and visit — replace the banner clutter. <strong>Why:</strong> a visitor deciding in seconds needs the promise and the next step, not five competing announcements.</p></article>
+        <article class="card"><h3>Visit information became a destination, not a footnote</h3><p><strong>Change:</strong> Hours and address moved into a high-contrast “Visit us” panel linked from the top navigation. <strong>Why:</strong> hours are the most time-sensitive fact on a local business site; burying them costs real visits.</p></article>
+        <article class="card"><h3>Menu items became individual cards</h3><p><strong>Change:</strong> Each highlight gets its own card, a plain-language description, and a visible price. <strong>Why:</strong> people choose between items — the layout should mirror that decision instead of merging everything into one block.</p></article>
+        <article class="card"><h3>Type and spacing grew up</h3><p><strong>Change:</strong> Larger body text, longer line height, and real white space between sections. <strong>Why:</strong> readability is the feature. If regulars include parents holding a toddler and a phone, small cramped type is a barrier, not a style.</p></article>
+        <article class="card"><h3>Allergy and ordering notes surfaced</h3><p><strong>Change:</strong> Both moved from tiny print into the menu section at normal size. <strong>Why:</strong> information people act on for safety or planning belongs where they are already looking.</p></article>
+        <article class="card"><h3>One warm palette, used consistently</h3><p><strong>Change:</strong> Clashing red/blue/green gave way to honey, cream, and brown throughout. <strong>Why:</strong> consistency is how a small business looks trustworthy — and the colors now come from the food, not a template.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="compare-heading">
+    <div class="wrap">
+      <h2 id="compare-heading">Before and after</h2>
+      <div class="compare">
+        <div class="card"><span class="tag">Before</span><h3>The original site</h3><p>Dated, busy, and cramped — kept exactly as the starting point so the comparison is honest.</p><p><a class="btn secondary" href="before.html">Open the before site</a></p></div>
+        <div class="card"><span class="tag">After</span><h3>The redesign</h3><p>Same content beats — hero, menu, about, testimonials, visit — reorganized, respaced, and rewritten for scanning.</p><p><a class="btn" href="after.html">Open the after site</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="learned-heading">
+    <div class="wrap kicker-grid">
+      <div>
+        <h2 id="learned-heading">What I learned</h2>
+        <p>The hardest part was not the new design — it was resisting the urge to add things. The old site's problem was abundance, not absence, so most of my best decisions were removals and reordering. I also learned how much hierarchy work a palette quietly does: once the colors calmed down, the content needed far less formatting to feel organized.</p>
+      </div>
+      <div>
+        <h2>What I would test next</h2>
+        <ul class="clean">
+          <li>Whether a “Order a custom cake” action in the hero earns more enquiries than the menu-first layout</li>
+          <li>Real photography in place of the CSS color blocks, and whether it slows the page on mid-range phones</li>
+          <li>Hours in the header on mobile, tested against the current visit panel</li>
+          <li>A short online order form, scoped carefully so it does not overwhelm a small team</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="wrap"><p>Concept redesign case study by Brittany Nation. Honeybee Bakery is fictional; no affiliation with any real business is claimed. <a href="before.html">Before</a> · <a href="after.html">After</a></p></div></footer>
+<script>
+  const t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
+  if(t&&n){t.addEventListener('click',()=>{const open=n.classList.toggle('open');t.setAttribute('aria-expanded',open);});}
+</script>
+</body>
+</html>
