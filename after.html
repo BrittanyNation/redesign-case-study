@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The redesigned Honeybee Bakery website — warm, clear, and mobile-first. Part of a concept redesign case study for a fictional bakery.">
+<title>After — Honeybee Bakery (Redesigned Site) | Redesign Case Study</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="after.html">Honeybee <span>Bakery</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="index.html">Case study</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap">
+      <p class="eyebrow">Baked fresh every morning</p>
+      <h1 id="hero-heading">Warm bread, real honey, and something sweet for the ride home.</h1>
+      <p class="lead">Honeybee Bakery is your neighborhood bakery for small-batch loaves, flaky pastries, and custom cakes — baked through the morning, so it is fresh when you arrive.</p>
+      <div class="btn-row">
+        <a class="btn" href="#menu">See menu highlights</a>
+        <a class="btn secondary" href="#visit">Plan your visit</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-1">Fresh loaves</div>
+        <div class="art-2">Honey pastries</div>
+        <div class="art-3">Custom cakes</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="menu" aria-labelledby="menu-heading">
+    <div class="wrap">
+      <h2 id="menu-heading">Menu highlights</h2>
+      <p>Three favorites that explain what we do best. The full menu is in store, and custom cakes can be arranged in advance.</p>
+      <div class="grid">
+        <article class="card"><span class="tag">Most loved</span><h3>Honey Butter Croissant</h3><p>Flaky and golden, brushed with honey butter while it is still warm.</p><p><strong>$4.50</strong></p></article>
+        <article class="card"><span class="tag">Signature</span><h3>Wildflower Honey Loaf</h3><p>Our signature sandwich loaf — soft, lightly sweet, and good for days.</p><p><strong>$8.00</strong></p></article>
+        <article class="card"><span class="tag">Seasonal</span><h3>Lemon Honey Tart</h3><p>Bright lemon curd in a crisp shell. Small, sharp, and not too sweet.</p><p><strong>$5.75</strong></p></article>
+      </div>
+      <p style="margin-top:1rem">Allergy note: many items contain wheat, dairy, and eggs, and some contain nuts. Ask our team and we will walk you through what is safe for you.</p>
+    </div>
+  </section>
+
+  <section class="section alt" id="about" aria-labelledby="about-heading">
+    <div class="wrap kicker-grid">
+      <div>
+        <h2 id="about-heading">About Honeybee</h2>
+        <p>Honeybee Bakery started in a home kitchen and grew into the neighborhood bakery we are today. We believe a bakery should smell like warm butter, know its regulars by name, and always have something sweet ready for the ride home.</p>
+        <p>Everything is baked in small batches through the morning — never all at once, never held too long.</p>
+      </div>
+      <div class="card"><h3>How we bake</h3><ul class="clean"><li>Small batches, all morning</li><li>Local honey in our signature bakes</li><li>Custom cakes made to order</li></ul></div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="wrap">
+      <h2 id="testimonials-heading">What neighbors say</h2>
+      <div class="grid two">
+        <blockquote class="card"><p>“The honey loaf is the only bread my kids ask for by name.”</p><footer>— A regular customer</footer></blockquote>
+        <blockquote class="card"><p>“Ordered a birthday cake and it was gone in ten minutes.”</p><footer>— A happy neighbor</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit" aria-labelledby="visit-heading" style="padding-top:0">
+    <div class="wrap">
+      <div class="visit">
+        <h2 id="visit-heading">Visit us</h2>
+        <div class="grid two">
+          <div><h3>Find us</h3><p>214 Main Street<br>Street parking nearby</p><p>Call the bakery to place an order or ask about a custom cake.</p></div>
+          <div><h3>Hours</h3><ul class="clean"><li>Tuesday–Friday: 7am – 6pm</li><li>Saturday: 8am – 4pm</li><li>Sunday: 8am – 1pm</li><li>Monday: Closed</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="wrap"><p>© Honeybee Bakery — a fictional bakery created for a design portfolio. <a href="before.html">See the original site</a> · <a href="index.html">Read the case study</a></p></div></footer>
+<script>
+  const t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
+  if(t&&n){t.addEventListener('click',()=>{const open=n.classList.toggle('open');t.setAttribute('aria-expanded',open);});}
+</script>
+</body>
+</html>
