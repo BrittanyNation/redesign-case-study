@@ -1,0 +1,122 @@
+/* Honeybee Bakery — Redesign Case Study
+   Shared stylesheet for index.html (case study), after.html (redesign),
+   and before.html (original, scoped under .old-site)
+   Mobile-first, CSS-only visuals, no external images or fonts. */
+
+:root{
+  --honey:#b7791f;
+  --honey-dark:#8a5a12;
+  --honey-soft:#f7e8c3;
+  --cream:#fffaf0;
+  --cream-2:#fdf3dd;
+  --brown:#3b2416;
+  --brown-2:#5c3d24;
+  --ink:#2e2118;
+  --muted:#6b5744;
+  --line:#e8d9bd;
+  --white:#ffffff;
+  --radius:18px;
+  --max:1120px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+  font-size:1.05rem;
+}
+h1,h2,h3,.sans{font-family:Verdana,Geneva,Tahoma,sans-serif; line-height:1.2; color:var(--brown)}
+h1{font-size:2.2rem; margin:.2em 0 .4em}
+h2{font-size:1.65rem; margin:0 0 .6em}
+h3{font-size:1.1rem; margin:.4em 0 .35em}
+p{margin:.5em 0 1em}
+a{color:var(--honey-dark); text-underline-offset:3px}
+a:focus-visible, button:focus-visible{outline:3px solid var(--honey-dark); outline-offset:3px; border-radius:6px}
+.wrap{width:min(100% - 2rem, var(--max)); margin-inline:auto}
+.skip-link{position:absolute; left:-9999px; top:0; background:var(--brown); color:#fff; padding:.7rem 1rem; z-index:50}
+.skip-link:focus{left:1rem; top:1rem; color:#fff}
+
+/* Header / nav */
+.site-header{background:var(--white); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0}
+.logo{font-family:Verdana,sans-serif; font-weight:700; font-size:1.15rem; color:var(--brown); text-decoration:none}
+.logo span{color:var(--honey-dark)}
+.nav-toggle{background:var(--brown); color:#fff; border:0; border-radius:999px; padding:.6rem 1rem; font:600 .95rem Verdana,sans-serif; cursor:pointer}
+.site-nav{display:none; padding:0 0 1rem}
+.site-nav.open{display:block}
+.site-nav ul{list-style:none; margin:0; padding:0; display:grid; gap:.4rem}
+.site-nav a{display:block; padding:.55rem .7rem; border-radius:10px; text-decoration:none; font-family:Verdana,sans-serif; font-size:.98rem}
+.site-nav a:hover{background:var(--cream-2)}
+
+/* Hero */
+.hero{padding:3rem 0 2.5rem; background:linear-gradient(180deg,var(--cream-2),var(--cream))}
+.eyebrow{font-family:Verdana,sans-serif; letter-spacing:.12em; text-transform:uppercase; font-size:.78rem; font-weight:700; color:var(--honey-dark); margin:0}
+.lead{font-size:1.18rem; max-width:42rem}
+.btn-row{display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.25rem}
+.btn{display:inline-block; background:var(--brown); color:#fff; text-decoration:none; padding:.85rem 1.25rem; border-radius:999px; font-family:Verdana,sans-serif; font-weight:700; font-size:.98rem}
+.btn.secondary{background:transparent; color:var(--brown); border:2px solid var(--brown)}
+.btn.light{background:var(--honey); color:#241703}
+.hero-art{margin-top:2rem; display:grid; grid-template-columns:repeat(3,1fr); gap:.75rem}
+.hero-art div{border-radius:var(--radius); min-height:110px; padding:1rem; display:flex; align-items:end; font-family:Verdana,sans-serif; font-weight:700; color:var(--brown)}
+.art-1{background:#f2c94c}.art-2{background:#e9a13b}.art-3{background:#c97b2d; color:#fff}
+
+/* Sections & cards */
+.section{padding:2.75rem 0}
+.section.alt{background:var(--white); border-block:1px solid var(--line)}
+.grid{display:grid; gap:1rem}
+.card{background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:1.25rem}
+.alt .card{background:var(--cream)}
+.card p:last-child{margin-bottom:0}
+.tag{display:inline-block; background:var(--honey-soft); color:var(--brown); border-radius:999px; padding:.2rem .65rem; font:700 .78rem Verdana,sans-serif; margin-bottom:.5rem}
+ul.clean{padding-left:1.2rem} ul.clean li{margin:.45rem 0}
+.compare{display:grid; gap:1rem}
+.compare .card{border-width:2px}
+blockquote{margin:0; font-size:1.08rem}
+blockquote footer{margin-top:.75rem; color:var(--muted); font-family:Verdana,sans-serif; font-size:.92rem}
+.visit{background:var(--brown); color:#fff7e6; border-radius:22px; padding:1.5rem}
+.visit h2,.visit h3{color:#fff}
+.visit a{color:#ffd97a}
+.site-footer{padding:2rem 0 2.5rem; color:var(--muted); font-size:.95rem}
+.note{background:var(--honey-soft); border-left:5px solid var(--honey); padding:1rem 1.1rem; border-radius:0 14px 14px 0}
+.kicker-grid{display:grid; gap:1rem}
+
+@media (min-width:720px){
+  h1{font-size:3rem} h2{font-size:2rem}
+  .nav-toggle{display:none}
+  .site-nav{display:block; padding:0}
+  .site-nav ul{display:flex; gap:.25rem}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .grid.two, .compare{grid-template-columns:repeat(2,1fr)}
+  .kicker-grid{grid-template-columns:1.2fr .8fr; align-items:start}
+  .hero{padding:4.5rem 0 3.5rem}
+  .hero-art div{min-height:160px}
+}
+
+/* ============ BEFORE / OLD SITE (scoped) ============ */
+.old-site{
+  font-family:"Times New Roman",Times,serif;
+  font-size:14px; line-height:1.35; color:#222;
+  background:repeating-linear-gradient(45deg,#fef08a 0 18px,#fde047 18px 36px);
+}
+.old-site .old-wrap{max-width:760px; margin:0 auto; background:#fff; border-left:4px solid #dc2626; border-right:4px solid #2563eb; padding:10px 14px 24px}
+.old-site h1,.old-site h2,.old-site h3{font-family:Arial,sans-serif; color:#7c2d12; line-height:1.1}
+.old-site h1{font-size:28px; text-align:center; margin:6px 0}
+.old-site h2{font-size:19px; background:#fca5a5; padding:4px 6px; border:1px dashed #2563eb}
+.old-site a{color:#0000ee}
+.old-site .old-topbar{background:#2563eb; color:#fff; text-align:center; padding:5px; font-family:Arial,sans-serif; font-size:12px; font-weight:700}
+.old-site .old-nav{text-align:center; background:#fef3c7; border:2px solid #16a34a; padding:6px; margin:10px 0; font-size:13px}
+.old-site .old-nav a{margin:0 5px}
+.old-site .old-hero{border:3px solid #dc2626; background:#dbeafe; padding:12px; text-align:center}
+.old-site .old-badge{display:inline-block; background:#dc2626; color:#fff; padding:2px 8px; font-family:Arial,sans-serif; font-weight:700; font-size:12px}
+.old-site .old-cols{display:block}
+.old-site .old-box{border:1px solid #999; background:#f3f4f6; padding:8px; margin:10px 0}
+.old-site .old-box.yellow{background:#fef9c3}.old-site .old-box.pink{background:#fce7f3}.old-site .old-box.green{background:#dcfce7}
+.old-site table{width:100%; border-collapse:collapse; font-size:13px}
+.old-site td,.old-site th{border:1px solid #666; padding:5px; text-align:left}
+.old-site .tiny{font-size:11px; color:#444}
+.old-site .center{text-align:center}
+@media (min-width:720px){ .old-site .old-cols{display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px} }
